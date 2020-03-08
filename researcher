@@ -1,0 +1,6 @@
+import requests
+from bs4 import BeautifulSoup
+
+requete = requests.get("https://www.reuters.com/companies/PEUP.PA/financials/income-statement-annual")
+page = requete.content
+soup = BeautifulSoup(page, features="html.parser")
